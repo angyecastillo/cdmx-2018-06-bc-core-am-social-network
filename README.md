@@ -18,7 +18,7 @@
 
 Realizamos un anális competitivo con 2 redes sociales profesionales, LinkedIn de alcance global y dirigido a todo público y Womenalia, enfocada en el nicho de mercado al que nosotras nos queremos dirigir 
 
-![benchmark](images/benchkmark.png)
+![benchmark](images/benckmark.png)
 
 
 
