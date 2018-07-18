@@ -90,10 +90,3 @@ firebase.database().ref("TalentMom")
   var user= s.val();
   $('#root').append("<img width='100px' src='"+user.foto+"'/>");
 })
-
-
-// función inicial para imprimir el primer mensaje
-function myFirstPost() {
-  var x = document.getElementById("myTextarea").value;
-  document.getElementById("demo").innerHTML = x;
-}
