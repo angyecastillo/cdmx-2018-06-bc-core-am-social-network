@@ -4,22 +4,35 @@ function registrer() {
   //console.log('diste un click');
   var email= document.getElementById('email').value;
   var password= document.getElementById('password').value;
+
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
+  if (errorCode == 'auth/weak-password'){
+    alert ('the password is too weak');
+  }else {
+    alert(errorMessage);
+  }
+
+  console.log(error);
+  //console.log(errorMessage);
   // ...
 });
 }
 function ingreso(){
-  var emailLogn= document.getElementById('emailLogn').value;
+  var emailLogin= document.getElementById('emailLogin').value;
   var passwordLogin= document.getElementById('passwordLogin').value;
-  firebase.auth().signInWithEmailAndPassword(emailLogn, passwordLogin).catch(function(error) {
+  firebase.auth().signInWithEmailAndPassword(emailLogin, passwordLogin)
+  .catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
+  console.log(errorCode);
+  console.log(errorMessage);
   // ...
+
 });
 
 }
@@ -90,3 +103,10 @@ firebase.database().ref("TalentMom")
   var user= s.val();
   $('#root').append("<img width='100px' src='"+user.foto+"'/>");
 })
+
+
+// función inicial para imprimir el primer mensaje
+function myFirstPost() {
+  var x = document.getElementById("myTextarea").value;
+  document.getElementById("demo").innerHTML = x;
+}
