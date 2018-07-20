@@ -48,10 +48,9 @@ function ingreso(){
   console.log(errorMessage);
   // ...
 
-});
-
-
-
+})
+}
+/*
 //Intentando crear una función donde iniciar con facebook
 //FUNCION DE AUTENTICACIÓN CON FACEBOOK
 
@@ -77,7 +76,7 @@ function loginFacebook() {
     // ...
   });
 }
-
+*/
 // const loginFacebook = () => { }
 
 
