@@ -17,16 +17,38 @@ const password = document.getElementById('password');
 var provider = new firebase.auth.GoogleAuthProvider();
 function registrer() {
   //console.log('diste un click');
-  email.value;
-  password.value;
+  var email= document.getElementById('email').value;
+  var password= document.getElementById('password').value;
+
   firebase.auth().createUserWithEmailAndPassword(email, password)
-    .catch(function (error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // ...
-    });
+  .catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  if (errorCode == 'auth/weak-password'){
+    alert ('the password is too weak');
+  }else {
+    alert(errorMessage);
+  }
+
+  console.log(error);
+  //console.log(errorMessage);
+  // ...
+});
 }
+function ingreso(){
+  var emailLogin= document.getElementById('emailLogin').value;
+  var passwordLogin= document.getElementById('passwordLogin').value;
+  firebase.auth().signInWithEmailAndPassword(emailLogin, passwordLogin)
+  .catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  console.log(errorCode);
+  console.log(errorMessage);
+  // ...
+
+});
 
 
 
