@@ -11,7 +11,7 @@ function registrer() {
   var errorCode = error.code;
   var errorMessage = error.message;
   if (errorCode == 'auth/weak-password'){
-    alert ('the password is too weak');
+    alert ('the password es');
   }else {
     alert(errorMessage);
   }
@@ -21,6 +21,71 @@ function registrer() {
   // ...
 });
 }
+firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+  // ...
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
+function ingreso(){
+  var emailLogin= document.getElementById('emailLogin').value;
+var passwordLogin= document.getElementById('passwordLogin').value;
+firebase.auth().signInWithEmailAndPassword(emailLogin, passwordLogin)
+.catch(function(error) {
+// Handle Errors here.
+var errorCode = error.code;
+var errorMessage = error.message;
+console.log(errorCode);
+console.log(errorMessage);
+// ...
+});
+
+}
+//FUNCION DE AUTENTICACIÓN CON FACEBOOK
+document.getElementById("Facebook").addEventListener("click",
+function(){
+  var provider = new firebase.auth.FacebookAuthProvider();
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+    alert("Entraste con FACEBOOK Felicidades!!!");
+    console.log(result);
+  }).catch(function(error){
+    alert("error");
+    console.log(error);
+  })
+})
+
+/*function loginFacebook() {
+//console.log('diste un click');
+email.value;
+password.value;
+// This gives you a Facebook Access Token. You can use it to access the Facebook API.
+var token = result.credential.accessToken;
+// The signed-in user info.
+var user = result.user;
+// ...
+}).catch(function (error) {
+// Handle Errors here.
+var errorCode = error.code;
+var errorMessage = error.message;
+// The email of the user's account used.
+var email = error.email;
+// The firebase.auth.AuthCredential type that was used.
+var credential = error.credential;
+// ...
+});
+}
+// const loginFacebook = () => { }
+*/
 function ingreso(){
   var emailLogin= document.getElementById('emailLogin').value;
   var passwordLogin= document.getElementById('passwordLogin').value;
@@ -103,10 +168,3 @@ firebase.database().ref("TalentMom")
   var user= s.val();
   $('#root').append("<img width='100px' src='"+user.foto+"'/>");
 })
-
-
-// función inicial para imprimir el primer mensaje
-function myFirstPost() {
-  var x = document.getElementById("myTextarea").value;
-  document.getElementById("demo").innerHTML = x;
-}
