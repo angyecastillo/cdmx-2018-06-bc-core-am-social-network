@@ -9,9 +9,9 @@ var config = {
 };
 firebase.initializeApp(config);
 
-
-const email = document.getElementById('email');
-const password = document.getElementById('password');
+// Declarando variables inputs 
+// const email = document.getElementById('email');
+// const password = document.getElementById('password');
 
 //login es la instania del proveedor del servicio
 var provider = new firebase.auth.GoogleAuthProvider();
