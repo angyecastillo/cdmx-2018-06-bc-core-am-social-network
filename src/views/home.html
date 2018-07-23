@@ -11,23 +11,29 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
   <!-- Our Custom CSS -->
   <link rel="stylesheet" href="../css/main.css">
+  <!-- Font awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="container-fluid"> <!-- inicia container -->
+  
+    
     <h2>  Muro </h2>
-    <div class="form-group"> <!-- inicia formulario -->
-      <label for="exampleInputEmail1">Escribe un post</label>
-      <textarea id="myTextarea" class="form-control" placeholder="escribe un mensaje para publicar" rows="3"> </textarea>
-    </div>
-    <button id="btnPost" class="btn btn-primary" type="button">Publicar</button>
-  </form>
+    <div class="form-group"> <!-- inicia formulario post-->
+      <label>Escribe un post</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text align-top"><i class="fas fa-pencil-alt"></i> </div>
+        </div>
+        <textarea id="myTextarea" class="form-control"  placeholder="escribe un mensaje para publicar" rows="3"></textarea>
+      </div>
+    </div> <!-- termina formulario post-->
+    <button id="btnPost" class="btn btn-primary"  type="button">Publicar</button>
   <hr>
-  <div class="jumbotron jumbotron-fluid">
-    <div  id="post" class="container">
-    </div>
-  </div>
-</div>
+   <section id="post"></section> 
+  </div> <!--Termina container-->
 
 <script src="../js/post.js"> </script>
 
