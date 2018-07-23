@@ -1,5 +1,5 @@
 // Initialize Firebase
-var config = {
+const config = {
   apiKey: "AIzaSyDVH3W9bV3MsZbXx4EqpV4Fg2RwlV0yhGM",
   authDomain: "red-social-dc1b2.firebaseapp.com",
   databaseURL: "https://red-social-dc1b2.firebaseio.com",
@@ -9,146 +9,85 @@ var config = {
 };
 firebase.initializeApp(config);
 
-// Declarando variables inputs 
-// const email = document.getElementById('email');
-// const password = document.getElementById('password');
 
 //login es la instania del proveedor del servicio
 var provider = new firebase.auth.GoogleAuthProvider();
+
 function registrer() {
   //console.log('diste un click');
-  var email= document.getElementById('email').value;
-  var password= document.getElementById('password').value;
-
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
   firebase.auth().createUserWithEmailAndPassword(email, password)
-  .catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  if (errorCode == 'auth/weak-password'){
-    alert ('the password es');
-  }else {
-    alert(errorMessage);
-  }
+    .catch(function (error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      if (errorCode == 'auth/weak-password') {
+        alert('the password es');
+      } else {
+        alert(errorMessage);
+      }
 
-  console.log(error);
-  //console.log(errorMessage);
-  // ...
-});
+      console.log(error);
+      //console.log(errorMessage);
+      // ...
+    });
 }
-firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Google Access Token. You can use it to access the Google API.
-  var token = result.credential.accessToken;
-  // The signed-in user info.
-  var user = result.user;
-  // ...
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});
-function ingreso(){
-  var emailLogin= document.getElementById('emailLogin').value;
-var passwordLogin= document.getElementById('passwordLogin').value;
-firebase.auth().signInWithEmailAndPassword(emailLogin, passwordLogin)
-.catch(function(error) {
-// Handle Errors here.
-var errorCode = error.code;
-var errorMessage = error.message;
-console.log(errorCode);
-console.log(errorMessage);
-// ...
-});
 
-}
-//FUNCION DE AUTENTICACIÓN CON FACEBOOK
-document.getElementById("Facebook").addEventListener("click",
-function(){
-  var provider = new firebase.auth.FacebookAuthProvider();
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-    alert("Entraste con FACEBOOK Felicidades!!!");
-    console.log(result);
-  }).catch(function(error){
-    alert("error");
-    console.log(error);
-  })
-})
 
-/*function loginFacebook() {
-//console.log('diste un click');
-email.value;
-password.value;
-// This gives you a Facebook Access Token. You can use it to access the Facebook API.
-var token = result.credential.accessToken;
-// The signed-in user info.
-var user = result.user;
-// ...
-}).catch(function (error) {
-// Handle Errors here.
-var errorCode = error.code;
-var errorMessage = error.message;
-// The email of the user's account used.
-var email = error.email;
-// The firebase.auth.AuthCredential type that was used.
-var credential = error.credential;
-// ...
-});
-}
-// const loginFacebook = () => { }
-*/
-function ingreso(){
-  var emailLogin= document.getElementById('emailLogin').value;
-  var passwordLogin= document.getElementById('passwordLogin').value;
+
+/*function ingreso() {
+  var emailLogin = document.getElementById('emailLogin').value;
+  var passwordLogin = document.getElementById('passwordLogin').value;
   firebase.auth().signInWithEmailAndPassword(emailLogin, passwordLogin)
-  .catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  console.log(errorCode);
-  console.log(errorMessage);
-  // ...
+    .catch(function (error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+      // ...
+    });
+}*/
 
-})
-}
-/*
-//Intentando crear una función donde iniciar con facebook
 //FUNCION DE AUTENTICACIÓN CON FACEBOOK
 
-var providerFb = new firebase.auth.FacebookAuthProvider();
-function loginFacebook() {
-  //console.log('diste un click');
-  email.value;
-  password.value;
-  firebase.auth().signInWithPopup(provider).then(function (result) {
-    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-    var token = result.credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    // ...
-  }).catch(function (error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-  });
+let btnFacebook = document.getElementById('btnFacebook');
+
+btnFacebook.addEventListener("click", function () {
+    var provider = new firebase.auth.FacebookAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function (result) {
+      //alert("Entraste con FACEBOOK Felicidades!!!");
+      location.href = '../views/home.html';
+      console.log(result);
+    }).catch(function (error) {
+      alert("error");
+      console.log(error);
+    })
+  })
+
+
+function ingreso() {
+  var emailLogin = document.getElementById('emailLogin').value;
+  var passwordLogin = document.getElementById('passwordLogin').value;
+  firebase.auth().signInWithEmailAndPassword(emailLogin, passwordLogin)
+    .catch(function (error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+      // ...
+
+    })
 }
-*/
-// const loginFacebook = () => { }
 
 
 function ingreso() {
   var emailLogn = document.getElementById('emailLogn').value;
   var passwordLogin = document.getElementById('passwordLogin').value;
-  firebase.auth().signInWithEmailAndPassword(emailLogn, passwordLogin).catch(function (error) {
+  firebase.auth().signInWithEmailAndPassword(emailLogn, passwordLogin)
+  .catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
