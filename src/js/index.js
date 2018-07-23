@@ -1,4 +1,4 @@
-// elementos para loguearse con facebook
+/*// elementos para loguearse con facebook
 let btnFacebook = document.getElementById('btnFacebook');
 
 btnFacebook.addEventListener("click", event => {
@@ -22,3 +22,4 @@ btnFacebook.addEventListener("click", event => {
  // ...
  });
 });
+*/
