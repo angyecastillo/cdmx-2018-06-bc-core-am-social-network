@@ -2,6 +2,7 @@
 let btnFacebook = document.getElementById('btnFacebook');
 
 btnFacebook.addEventListener("click", event => {
+
  console.log('entraste con facebook');
  const provider = new firebase.auth.FacebookAuthProvider();
  firebase.auth().signInWithPopup(provider).then(function(result) {
