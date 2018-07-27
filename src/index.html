@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,8 +9,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
     crossorigin="anonymous">
   <!-- Bootstrap CSS CDN -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
   <!-- Our Custom CSS -->
   <link rel="stylesheet" href="css/main.css">
@@ -33,13 +32,13 @@
       </div>
       <button class="btn btn-primary" type="submit" onclick="ingreso()">Acceder</button>
       <div>
-      <div class="form-group">  
-        <button id="btnGoogle" class="">Inicia con Google</button>
-        <button id="btnFacebook" class="">Inicia con Facebook</button>
-      </div>  
-      <p>¿No estás registrada?</p>
-      <a href="views/home.html">Registrate</a>
-       <!--  <button id="guardarDatos" class="btn-social btn-twitter">guardar</button>-->
+        <div class="form-group">
+          <button id="btnGoogle" class="">Inicia con Google</button>
+          <button id="btnFacebook" class="">Inicia con Facebook</button>
+        </div>
+        <p>¿No estás registrada?</p>
+        <a href="views/registro.html">Registrate</a>
+        <!--  <button id="guardarDatos" class="btn-social btn-twitter">guardar</button>-->
       </div>
       <div id="contenido"></div>
     </form>
@@ -47,8 +46,10 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script src="js/firebase.js"></script>
   <script type="text/javascript" src="js/autenticacion.js"> </script>
   <script src="js/index.js"></script>
 </body>
+
 </html>
