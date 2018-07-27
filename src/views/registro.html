@@ -13,20 +13,56 @@
   <!-- Our Custom CSS -->
   <link rel="stylesheet" href="../css/main.css">
 </head>
-<h1>Registro de Usuario</h1>
-<input id="email" type="email" placeholder="Ingresa Email">
-<input id="password" type="password" placeholder="Ingresa Contraseña">
-<button onclick="registrer()">Registrarse</button>
-<button id="btnGoogle">Inicia con Google </button>
-<button id="btnFacebook">Inicia con Facebook </button>
-<!-- <button id= "guardarDatos">guardar</button> -->
-<div id="contenido"></div>
-<!-- Agregando scripts-->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-<script src="../js/firebase.js"></script>
-<script src="../js/autenticacion.js"></script>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="col align-self-center">
+        TalentMom
+    </div>
+    
+    <!-- inicia container -->
+    <h3>Registrate</h3>
+    <!-- inicia formulario -->
+    <form>
+      <div class="form-group">
+        <label>Email address</label>
+        <input id="email" class="form-control" type="email" placeholder="Ingresa Email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input id="password" class="form-control" type="password" placeholder="Ingresa Contraseña">
+      </div>
+      <button class="btn btn-primary" type="submit" onclick="registrer()">Registrarse</button>
+      <div>
+        <div class="form-group  text-center mt-5 ">
+          <small class="form-text text-muted mb-2">puedes iniciar sesión con</small>
+          <button id="btnGoogle" class="btn btn-primary btn-circle btn-lg mr-3">
+            <i class="fab fa-google"></i>
+          </button>
+          <button id="btnFacebook" class="btn btn-primary btn-circle btn-lg">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+        </div>
+        <div class="form-group text-center mt-5 ">
+          <small class="form-text text-muted">¿No estás Registrada?</small>
+          <a href="views/registro.html">REGÍSTRATE</a>
+        </div>
+      </div>
+      <div id="contenido"></div>
+    </form>
+  </div>
+
+
+
+
+
+  <!-- Agregando scripts-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script src="../js/firebase.js"></script>
+  <script src="../js/autenticacion.js"></script>
 </body>
 
 </html>
