@@ -5,11 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>TalentMom | Iniciar sesión</title>
-  <script  src="http://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+  <script src="http://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
 
-   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
   <!-- Font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
     crossorigin="anonymous">
@@ -20,35 +21,41 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+  
+  <div class="container-login">
     <!-- inicia container -->
-    <div class="pt-5 pb-5 text-center">
-      <img src="images/talentMOM_negativo.svg" alt="triangle with all three sides equal" height="87px" width="300px" />
-    </div>
-    <h3>Inicio de Sesión</h3>
+    <div class="container-fluid">
+      <div class="pt-5 pb-5 text-center">
+        <img src="images/talentMOM_negativo.svg" alt="triangle with all three sides equal" height="87px" width="300px" />
+      </div>
+      <h3 class="text-light">Inicio de Sesión</h3>
 
-    <div class="container">
-      <input type="email" class="form-control" id="txtEmail" placeholder="Correo" id="user-email" required>
-      <br>
-      <input type="password" class="form-control" id="txtPassword" placeholder="Contraseña" required>
-      <br>
-      <button id = "btnLogin" class="btn btn-primary">Login</button>
-      <button id = "btnSignUp" class="btn btn-secondary">Registrarse</button>
-      <button id = "btnLogout" class="btn btn-action hide">Logout</button>
-    </div>
-    <!-- inicia formulario -->
-    <form>
-          <div class="form-group  text-center mt-5 ">
-          <small class="form-text text-muted mb-2">puedes iniciar sesión con</small>
+      <div class="container">
+        <input type="email" class="form-control mb-4" id="txtEmail" placeholder="Correo" id="user-email" required>
+
+        <input type="password" class="form-control mb-4" id="txtPassword" placeholder="Contraseña" required>
+
+        <button id="btnLogin" class="btn btn-primary">Login</button>
+        <button id="btnSignUp" class="btn btn-secondary">Registrarse</button>
+        <button id="btnLogout" class="btn btn-action hide">Logout</button>
+      </div>
+      <!-- inicia formulario -->
+      <form>
+        <div class="form-group  text-center mt-5 ">
+          <small class="form-text text-light mb-2">puedes iniciar sesión con</small>
           <button id="loginGoogle" type="button" class="btn btn-light btn-circle btn-lg mr-3">
-          <i class="fab fa-google"></i></button>
+            <i class="fab fa-google"></i>
+          </button>
           <button id="loginFacebook" type="button" class="btn btn-light btn-circle btn-lg">
-          <i class="fab fa-facebook-f"></i></button>
+            <i class="fab fa-facebook-f"></i>
+          </button>
           </button>
         </div>
-      </div>
+    </div>
     </form>
     <div id="contenido"></div>
+  </div>
+
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
