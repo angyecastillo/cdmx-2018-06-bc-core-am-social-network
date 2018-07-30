@@ -41,7 +41,7 @@
      firebase.auth().onAuthStateChanged( firebaseUser => {
       if(firebaseUser) {
         console.log(firebaseUser);
-        location.assign('../home.html');
+        location.assign('home.html');
         btnLogout.classList.remove('hide');
   
       } else {
@@ -88,10 +88,10 @@
     // observador();
   });
   
-  let muro = () => {
+  /* let muro = () => {
     location.href = '../view/home.html';
   };
-  
+ */  
   // Funcion para guardar los datos del usuaio en Firebase
   const datosUsuario = (user) =>{
     let database = firebase.database();
