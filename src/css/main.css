@@ -1,0 +1,66 @@
+body{
+    /*background: #bbccee;*/
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+a{
+    color: #563d7c;
+}
+
+/******* BOTONES  *******/
+
+.btn-primary{
+    background: #8F4D65;
+    border: #8F4D65 ;
+}
+
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+ 
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+}
+
+#btn-logout{
+    margin-top: 1.5em;
+}
+
+
+
+
+
+/* Small devices (landscape phones, 576px and up)¨*/
+@media (min-width: 576px) {
+
+ }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
