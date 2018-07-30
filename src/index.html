@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>TalentMom | Iniciar sesión</title>
+  <script  src="http://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <!-- Font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
     crossorigin="anonymous">
@@ -21,31 +26,25 @@
       TalentMom
     </div>
     <h3>Inicio de Sesión</h3>
+
+    <div class="container">
+      <input type="email" class="form-control" id="txtEmail" placeholder="Correo" id="user-email" required>
+      <br>
+      <input type="password" class="form-control" id="txtPassword" placeholder="Contraseña" required>
+      <br>
+      <button id = "btnLogin" class="btn btn-action">Login</button>
+      <button id = "btnSignUp" class="btn btn-secondary">Registrarse</button>
+      <button id = "btnLogout" class="btn btn-action hide">Logout</button>
+    </div>
     <!-- inicia formulario -->
     <form>
-      <div class="form-group">
-        <label>Email address</label>
-        <input id="emailLogin" class="form-control" type="email" aria-describedby="emailHelp" placeholder="Ingresa Email">
-        <small id="emailHelp" class="form-text text-muted">advertencias</small>
-      </div>
-      <div class="form-group">
-        <label>Password</label>
-        <input id="passwordLogin" class="form-control" type="password" placeholder="Ingresa Contraseña">
-      </div>
-      <button class="btn btn-primary" type="submit" onclick="ingreso()">Acceder</button>
-      <div>
-        <div class="form-group  text-center mt-5 ">
+          <div class="form-group  text-center mt-5 ">
           <small class="form-text text-muted mb-2">puedes iniciar sesión con</small>
-          <button id="btnGoogle" class="btn btn-primary btn-circle btn-lg mr-3">
-            <i class="fab fa-google"></i>
+          <button id="loginGoogle" type="button" class="btn btn-primary btn-circle btn-lg mr-3">
+          <i class="fab fa-google"></i></button>
+          <button id="loginFacebook" type="button" class="btn btn-primary btn-circle btn-lg">
+          <i class="fab fa-facebook-f"></i></button>
           </button>
-          <button id="btnFacebook" class="btn btn-primary btn-circle btn-lg">
-            <i class="fab fa-facebook-f"></i>
-          </button>
-        </div>
-        <div class="form-group text-center mt-5 ">
-          <small class="form-text text-muted">¿No estás Registrada?</small>
-          <a href="views/registro.html">REGÍSTRATE</a>
         </div>
       </div>
     </form>
@@ -55,9 +54,22 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-  <script src="js/firebase.js"></script>
-  <script type="text/javascript" src="js/autenticacion.js"> </script>
+<script>
+  // Initialize Firebase
+  let config = {
+    apiKey: "AIzaSyAr4sEq4Gr3ujFxq3REa2QIEfnU2KHkoqc",
+    authDomain: "talent-mom.firebaseapp.com",
+    databaseURL: "https://talent-mom.firebaseio.com",
+    projectId: "talent-mom",
+    storageBucket: "talent-mom.appspot.com",
+    messagingSenderId: "685167779112"
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="js/autenticacion.js"> </script>
   <script src="js/index.js"></script>
+  <script src="js/post.js"></script>
+
 </body>
 
 </html>

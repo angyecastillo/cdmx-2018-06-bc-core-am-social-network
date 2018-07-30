@@ -1,13 +1,18 @@
 // Initialize Firebase
-const config = {
-  apiKey: "AIzaSyDVH3W9bV3MsZbXx4EqpV4Fg2RwlV0yhGM",
-  authDomain: "red-social-dc1b2.firebaseapp.com",
-  databaseURL: "https://red-social-dc1b2.firebaseio.com",
-  projectId: "rFed-social-dc1b2",
-  storageBucket: "red-social-dc1b2.appspot.com",
-  messagingSenderId: "159262835837"
-};
-firebase.initializeApp(config);
+let appFirebase = {};
+(function() {
+  // Initialize Firebase
+  const config = {
+    apiKey: 'AIzaSyC20SbyxB9RKJgcfTvfYuhJKxuuxh0RQBQ',
+    authDomain: 'prueba-firebase-ef04b.firebaseapp.com',
+    databaseURL: 'https://prueba-firebase-ef04b.firebaseio.com',
+    projectId: 'prueba-firebase-ef04b',
+    storageBucket: 'prueba-firebase-ef04b.appspot.com',
+    messagingSenderId: '499846254860'
+  };
+  firebase.initializeApp(config);
+  appFirebase = firebase;
+}());
 
 
 //login es la instania del proveedor del servicio
