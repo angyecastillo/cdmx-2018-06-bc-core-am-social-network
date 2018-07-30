@@ -42,25 +42,61 @@ a{
 }
 
 
-
-
-
-/* Small devices (landscape phones, 576px and up)¨*/
-@media (min-width: 576px) {
-
- }
-
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-
+.btn-primary{
+    background-color: #6C4287;
+    border-radius: 18px;
 }
 
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-
+.btn-primary:not(:disabled):not(.disabled):active{
+    background-color: #5D3874;
+    border-radius: 18px;
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
 
+.btn-secondary{
+    background-color: #66B49C;
+    border-radius: 18px;
 }
+
+
+.btn-secondary:not(:disabled):not(.disabled):active{
+    background-color: #5BAC93;
+    border-radius: 18px;
+}
+
+/* ---------------------------------------------------
+MEDIAQUERIES
+----------------------------------------------------- */
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  
+    .container-fluid{
+        background: url(../images/backgroud-TalentMOM-2.jpg) no-repeat center;
+        background-size: cover;
+        background-position-x: -500px;
+        height: 731px;
+    }
+
+  }
+  
+  /* Small devices (landscape phones, 576px and up)*/
+  @media (min-width: 576px) and (max-width: 767.98px) {  
+
+  
+  }
+  
+  /* Medium devices (tablets, 768px and up)*/
+  @media (min-width: 768px) and (max-width: 991.98px) {
+      
+  }
+  
+  /* Large devices (desktops, 992px and up)*/
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up)*/
+  @media (min-width: 1200px) {
+    
+   }
