@@ -12,6 +12,17 @@ const cerrar = () => {
 };
 
 
+firebase.auth().onAuthStateChanged( firebaseUser => {
+  let userName = firebaseUser.displayName;
+  let userImage = firebaseUser.photoURL;
+  console.log(userImage);
+  let printName = document.getElementById('user-name');
+  printName.innerHTML = `Bienvenida ${userName}`;
+  let printImageUser = document.getElementById('user-image');
+  printImageUser.innerHTML = `<img src="${userImage}" id="user-img" class="img-thumbnail">`;
+
+})
+
 
 // Elementos para publicar post en el muro
 const myTaextarea = document.getElementById('myTextarea');
