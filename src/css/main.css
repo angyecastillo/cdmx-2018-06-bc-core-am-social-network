@@ -22,7 +22,11 @@ a{
 
 /* LOGIN */
 
-.form-control{
+.minimal-input::placeholder{
+    color: #ffffff;
+}
+
+.minimal-input{
     color :#ffffff ;
     background-color: transparent;
     border: none;
