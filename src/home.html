@@ -5,45 +5,111 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>TalentMom | Conectando a mamás profesionistas</title>
+  <link rel="icon" href="images/favicon.ico">
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
   <!-- Our Custom CSS -->
   <link rel="stylesheet" href="css/main.css">
   <!-- Font awesome -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <h4>BIENVENIDA</h4>
-  <strong id= "Nombre"></strong>
-  <button onclick = "cerrar()">cerrar sesión</button>
-  <div id="contenido"></div>
-  <a id="imagen"></a>
-  <div class="container-fluid"> <!-- inicia container -->
-    <h2>  Muro </h2>
-    <div class="form-group"> <!-- inicia formulario post-->
-      <label>Escribe un post</label>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <div class="input-group-text align-top"><i class="fas fa-pencil-alt"></i> </div>
-        </div>
-        <textarea id="myTextarea" class="form-control"  placeholder="escribe un mensaje para publicar" rows="3"></textarea>
+  <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar ">
+    <a class="navbar-brand mr-0 mr-md-2" href="/">
+      <img src="images/talentMOM-negativo-color.svg" alt="TalentMOM" class="" />
+    </a>
+
+      <ul class="navbar-nav bd-navbar-nav flex-row justify-content-end ml-md-auto d-none d-md-flex ">
+          
+        <li class="nav-item">
+          <a class="nav-link " href="#">
+            <i class="fas fa-home"></i> Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" target="_self">
+            <i class="fas fa-briefcase"></i> Empleos </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_self">
+            <i class="fas fa-envelope"></i> Mensajes </a>
+        </li>
+
+      </ul>
+    
+
+
+  </header>
+
+
+  <div class="container-fluid">
+    <!-- inicia container -->
+    <div class="row flex-xl-nowrap">
+      <div class="col-sm-12 col-md-2 col-xl-2 ">
+        <h4>BIENVENIDA</h4>
+        <strong id="Nombre"></strong>
+        <button onclick="cerrar()">cerrar sesión</button>
+        <div id="contenido"></div>
+        <a id="imagen"></a>
       </div>
-    </div> <!-- termina formulario post-->
-    <button id="btnPost" class="btn btn-primary"  type="button">Publicar</button>
 
-  <hr>
-   <section id="container-post"></section>
-  </div> <!--Termina container-->
-<!-- Agregando scripts-->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+      <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+        <h5> Muro </h5>
+        <div class="form-group">
+          <!-- inicia formulario post-->
+          <label>Escribe un post</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text align-top">
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+            </div>
+            <textarea id="myTextarea" class="form-control" placeholder="escribe un mensaje para publicar" rows="3"></textarea>
+          </div>
+        </div>
+        <!-- termina formulario post-->
+        <button id="btnPost" class="btn btn-primary" type="button">Publicar</button>
 
-<script src="js/firebase.js"></script>
-<script src="js/autenticacion.js"></script>
-<script src="js/post.js"> </script>
+        <hr>
+
+        <section id="container-post"></section>
+      </main>
+    </div>
+  </div>
+  <!--Termina container-->
+  <footer class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar ml-md-auto fixed-bottom d-block d-sm-none d-sm-block d-md-none d-lg-none">
+
+    <ul class="navbar-nav justify-content-center nav-justified flex-row ml-md-auto  d-md-flex">
+
+      <li class="nav-item">
+        <a class="nav-link p-2" href="#" target="_self">
+          <i class="fas fa-home"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-2" href="#" target="_self">
+          <i class="fas fa-briefcase"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-2" href="#" target="_self">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    </ul>
+
+  </footer>
+  <!-- Agregando scripts-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
+  <script src="js/firebase.js"></script>
+  <script src="js/autenticacion.js"></script>
+  <script src="js/post.js"> </script>
 </body>
 
 </html>
