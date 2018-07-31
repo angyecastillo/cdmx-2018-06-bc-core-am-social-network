@@ -33,10 +33,10 @@
       promise.catch(e => console.log(e.message));
     });
   
-    btnLogout.addEventListener('click', event => {
+/*     btnLogout.addEventListener('click', event => {
       firebase.auth().signOut();
     });
-  
+ */  
     // Añadir un listener en tiempo real
      firebase.auth().onAuthStateChanged( firebaseUser => {
       if(firebaseUser) {

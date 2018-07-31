@@ -10,6 +10,40 @@ a{
     color: #563d7c;
 }
 
+
+
+/* nav */
+
+.bd-navbar {
+    min-height: 4rem;
+    background-color: #6C4287;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+}
+
+/* LOGIN */
+
+.form-control{
+    color :#ffffff ;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: border .3s, -webkit-box-shadow .3s;
+    transition: border .3s, -webkit-box-shadow .3s;
+    transition: box-shadow .3s, border .3s;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+}
+
 /******* BOTONES  *******/
 
 .btn-primary{
@@ -45,23 +79,31 @@ a{
 .btn-primary{
     background-color: #6C4287;
     border-radius: 18px;
+    border-color: #6C4287;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active{
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):hover
+{
     background-color: #5D3874;
     border-radius: 18px;
+    border-color: #5D3874;
 }
 
 
 .btn-secondary{
     background-color: #66B49C;
     border-radius: 18px;
+    border-color: #66B49C;
 }
 
 
-.btn-secondary:not(:disabled):not(.disabled):active{
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled):hover
+{
     background-color: #5BAC93;
     border-radius: 18px;
+    border-color: #5BAC93;
 }
 
 /* ---------------------------------------------------
@@ -72,31 +114,118 @@ MEDIAQUERIES
 @media (max-width: 575.98px) {
   
     .container-login{
-        width: 100%;
         background: url(../images/backgroud-TalentMOM-2.jpg) no-repeat center;
-        background-size: cover;
         background-position-x: -500px;
-        height: 731px;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        position: absolute;
     }
+
+    .logo-TalentMOM{
+        width: 80%;
+    }
+
+
   }
   
   /* Small devices (landscape phones, 576px and up)*/
   @media (min-width: 576px) and (max-width: 767.98px) {  
+        .container-login{
+            background: url(../images/backgroud-TalentMOM-2.jpg) no-repeat center;
+            background-position-x: -500px;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            position: absolute;
+        }
+    
+        .container{
+            width: 80%;
+        }
+    
+        .container-center{
+            padding-top: 20%; 
+        }
+    
+        .logo-TalentMOM{
+            width: 50%;
+        }
+    
 
   
   }
   
   /* Medium devices (tablets, 768px and up)*/
-  @media (min-width: 768px) and (max-width: 991.98px) {
-      
+  @media (min-width: 768px) and (max-width: 991.99px) {
+    .container-login{
+        background: url(../images/backgroud-TalentMOM-2.jpg) no-repeat center;
+        background-position-x: -500px;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        position: absolute;
+    }
+
+    .container{
+        width: 80%;
+    }
+
+    .container-center{
+        padding-top: 20%; 
+    }
+
+    .logo-TalentMOM{
+        width: 50%;
+    }
+
+
   }
   
   /* Large devices (desktops, 992px and up)*/
-  @media (min-width: 992px) and (max-width: 1199.98px) {
-    
+  @media (min-width: 992px) and (max-width: 1199.99px) {
+    .container-login{
+        background: url(../images/backgroud-TalentMOM-desk.jpg) no-repeat center;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        position: absolute;
+    }
+
+    .container{
+        width: 60%;
+    }
+
+    .container-center{
+        padding-top: 30%; 
+    }
+
+    .logo-TalentMOM{
+        width: 50%;
+    }
   }
   
   /* Extra large devices (large desktops, 1200px and up)*/
   @media (min-width: 1200px) {
+
+    .container-login{
+        background: url(../images/backgroud-TalentMOM-desk.jpg) no-repeat center;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        position: absolute;
+    }
+
+    .container{
+        width: 40%;
+    }
+
+    .container-center{
+        padding-top: 10%; 
+    }
+
+    .logo-TalentMOM{
+        width: 30%;
+    }
     
    }

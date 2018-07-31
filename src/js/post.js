@@ -56,9 +56,9 @@ const creatNewPostElements = (postString) => {
   postParagraph.className = 'card-text editMode';
   editInput.setAttribute('style','display:none;');
   cardFooter.className = 'card-footer';
-  editAtag.className = 'edit btn btn-link';
+  editAtag.className = 'edit btn btn-link d-inline p-2';
   editAtag.innerHTML = 'EDITAR';
-  deleteAtag.className = 'delete btn btn-link';
+  deleteAtag.className = 'delete btn btn-link d-inline p-2';
   deleteAtag.innerHTML = 'ELIMINAR';
   likeAtag.className = 'float-right like btn btn-link';
   likeicon.className = 'fas fa-heart';
@@ -72,7 +72,7 @@ const creatNewPostElements = (postString) => {
   cardBody.appendChild(dateParagraph);
   cardBody.appendChild(postParagraph);
   cardBody.appendChild(editInput);
-  postItem.appendChild(cardFooter);
+/*   postItem.appendChild(cardFooter); */
   postItem.appendChild(editAtag);
   postItem.appendChild(deleteAtag);
   postItem.appendChild(likeAtag);

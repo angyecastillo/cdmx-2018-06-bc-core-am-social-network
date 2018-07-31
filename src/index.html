@@ -5,8 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>TalentMom | Iniciar sesión</title>
-  <script src="http://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
-
+  <link rel="icon" href="images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
@@ -24,20 +23,20 @@
   
   <div class="container-login">
     <!-- inicia container -->
-    <div class="container-fluid">
+    <div class="container-fluid container-center">
       <div class="pt-5 pb-5 text-center">
-        <img src="images/talentMOM_negativo.svg" alt="triangle with all three sides equal" height="87px" width="300px" />
+        <img src="images/talentMOM-negativo-color.svg" alt="TalentMOM" class="logo-TalentMOM" />
+        <p class="text-light">Conectando a mamás profesionistas</p> 
       </div>
-      <h3 class="text-light">Inicio de Sesión</h3>
-
+    
       <div class="container">
-        <input type="email" class="form-control mb-4" id="txtEmail" placeholder="Correo" id="user-email" required>
+        <input type="email" class="form-control mb-4" id="txtEmail" placeholder="Correo" required>
 
         <input type="password" class="form-control mb-4" id="txtPassword" placeholder="Contraseña" required>
 
-        <button id="btnLogin" class="btn btn-primary">Login</button>
-        <button id="btnSignUp" class="btn btn-secondary">Registrarse</button>
-        <button id="btnLogout" class="btn btn-action hide">Logout</button>
+        <button id="btnLogin" class="btn btn-primary">INGRESAR</button>
+        <button id="btnSignUp" class="btn btn-secondary">REGISTRATE</button>
+  
       </div>
       <!-- inicia formulario -->
       <form>
@@ -49,9 +48,7 @@
           <button id="loginFacebook" type="button" class="btn btn-light btn-circle btn-lg">
             <i class="fab fa-facebook-f"></i>
           </button>
-          </button>
         </div>
-    </div>
     </form>
     <div id="contenido"></div>
   </div>
