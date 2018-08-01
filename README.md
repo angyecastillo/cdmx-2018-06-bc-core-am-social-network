@@ -136,7 +136,7 @@ Análisis de datos estadísticos sobre hábitos en internet  de mamás digitales
 
 * Quiénes son los principales usuarios de producto
   Nuestras principales usuarias son mamás digitales entre los 25 y 45 años de edad que combinan la maternidad con su desarrollo profesional
-  ![protousuario](src/images/Diapositiva1.jpg)
+  ![protousuario](src/images/Diapositiva1.JPG)
 
 * Qué problema resuelve el producto para estos usuarios
   Poder formar parte de una comunidad en la que puede resolver dudas o compartir sus experiencias laborales entorno a la maternidad, desarrollo personal, crianza y familia.
